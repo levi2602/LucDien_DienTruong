@@ -18,3 +18,19 @@ function calculate() {
         "<tr><td>C</td><td>" + calculateElectricField(charge3, charge1, charge2, distanceCA, distanceBC, 'C') + "</td><td>" + calculateForce(charge3, charge1, charge2, distanceCA, distanceBC, 'C') + "</td><td>" + calculateAngle(charge3, charge1, charge2, distanceCA, distanceBC, 'C') + "</td></tr>" +
         "</table>";
 }
+
+function calculateElectricField(q, q1, q2, r1, r2, point) {
+    var k = 8.9875517923 * Math.pow(10, 9); // Coulomb's constant
+    return k * q * (q1 / Math.pow(r1, 2) + q2 / Math.pow(r2, 2));
+}
+
+function calculateForce(q, q1, q2, r1, r2, point) {
+    var k = 8.9875517923 * Math.pow(10, 9); // Coulomb's constant
+    return k * q * (q1 / Math.pow(r1, 2) + q2 / Math.pow(r2, 2));
+}
+
+function calculateAngle(q, q1, q2, r1, r2, point) {
+    var angleRad = Math.atan(r2 / r1);
+    var angleDeg = angleRad * (180 / Math.PI);
+    return angleDeg;
+}
