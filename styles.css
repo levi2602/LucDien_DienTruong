@@ -8,8 +8,9 @@ body {
     margin: 0 auto;
 }
 
-.point {
-    width: 100px;
+.distance,
+.charge {
+    width: 150px;
     margin-bottom: 10px;
 }
 
